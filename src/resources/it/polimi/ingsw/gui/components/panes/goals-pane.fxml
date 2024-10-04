@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import it.polimi.ingsw.gui.components.panes.board.BoardPane?>
+<?import it.polimi.ingsw.gui.components.panes.card.CardRect?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<fx:root styleClass="top" stylesheets="@goals-pane.css" type="javafx.scene.layout.GridPane"
+         xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="it.polimi.ingsw.gui.components.panes.GoalsPane">
+
+    <rowConstraints>
+        <RowConstraints percentHeight="50"/>
+        <RowConstraints percentHeight="50"/>
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS"/>
+    </columnConstraints>
+
+    <HBox>
+        <!--          prefHeight="125.0"-->
+        <HBox alignment="CENTER" styleClass="br" HBox.hgrow="ALWAYS">
+            <CardRect fx:id="goalPane1" cardHeight="99"/>
+        </HBox>
+        <HBox alignment="CENTER" styleClass="br" HBox.hgrow="ALWAYS">
+            <CardRect fx:id="goalPane2" cardHeight="99"/>
+
+        </HBox>
+        <HBox alignment="CENTER" HBox.hgrow="ALWAYS">
+            <styleClass>
+                <String fx:value="b"/>
+                <String fx:value="personal"/>
+            </styleClass>
+            <CardRect fx:id="personalGoalPane" cardHeight="99"/>
+
+        </HBox>
+    </HBox>
+    <!--    <HBox alignment="CENTER" layoutX="30.0" layoutY="154.0" VBox.vgrow="ALWAYS">-->
+    <BoardPane GridPane.rowIndex="1" fx:id="boardPane"/>
+    <!--    </HBox>-->
+
+</fx:root>

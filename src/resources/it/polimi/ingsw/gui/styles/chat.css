@@ -1,0 +1,26 @@
+.message-list {
+    -fx-padding: 20 0 15 0;
+}
+
+.message {
+    -fx-background-color: lightgray;
+    -fx-background-radius: 5;
+
+    -fx-padding: 0.28em 0.56em 0.28em 0.56em;
+
+    -fx-font-size: 1em;
+}
+
+.message-mine,
+.message-other {
+    -fx-padding: 0 1.67em 0.17em 1.11em
+}
+
+.message-mine {
+    -fx-alignment: center-right;
+}
+
+.message-other {
+    -fx-spacing: 0.55em;
+    -fx-alignment: center-left;
+}

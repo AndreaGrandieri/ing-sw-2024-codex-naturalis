@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import it.polimi.ingsw.gui.components.panes.card.CardRect?>
+<?import it.polimi.ingsw.gui.components.panes.manuscript.ManuscriptBox?>
+<?import it.polimi.ingsw.gui.components.panes.NewTopBarPane?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<fx:root styleClass="top" stylesheets="@other-player-pane.css" type="GridPane"
+         xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="it.polimi.ingsw.gui.components.panes.OtherPlayerPane">
+
+        <rowConstraints>
+            <RowConstraints vgrow="ALWAYS" />
+        </rowConstraints>
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" />
+            <ColumnConstraints hgrow="ALWAYS" percentWidth="20.0" />
+        </columnConstraints>
+
+        <VBox HBox.hgrow="ALWAYS">
+            <NewTopBarPane fx:id="topBarPane"/>
+            <!--            cardHeight="25"-->
+            <ManuscriptBox fx:id="manuscriptPane" VBox.vgrow="ALWAYS">
+                <styleClass>
+                    <String fx:value="manuscript" />
+                    <String fx:value="r" />
+                </styleClass>
+            </ManuscriptBox>
+        </VBox>
+
+        <VBox GridPane.columnIndex="1" VBox.vgrow="ALWAYS">
+
+            <VBox fx:id="box1" alignment="CENTER" styleClass="b" VBox.vgrow="ALWAYS">
+                <CardRect fx:id="cardPane1" cardHeight="42"/>
+            </VBox>
+
+            <VBox fx:id="box2" alignment="CENTER" styleClass="b" VBox.vgrow="ALWAYS">
+                <CardRect fx:id="cardPane2" cardHeight="42"/>
+            </VBox>
+
+            <VBox fx:id="box3" alignment="CENTER" VBox.vgrow="ALWAYS">
+                <styleClass>
+                    <String fx:value="b" />
+                    <String fx:value="selected" />
+                </styleClass>
+                <CardRect fx:id="cardPane3" cardHeight="42"/>
+            </VBox>
+
+            <VBox fx:id="box4" alignment="CENTER" VBox.vgrow="ALWAYS">
+                <CardRect fx:id="goalPane" cardHeight="42"/>
+            </VBox>
+
+        </VBox>
+
+</fx:root>

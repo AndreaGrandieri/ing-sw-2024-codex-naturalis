@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import it.polimi.ingsw.gui.components.views.GroupPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<fx:root xmlns="http://javafx.com/javafx" fx:controller="it.polimi.ingsw.gui.views.SetupView"
+         style="-fx-font-size:18px"
+         xmlns:fx="http://javafx.com/fxml" hgap="20" vgap="20" type="GridPane">
+    <rowConstraints>
+        <RowConstraints/>
+        <RowConstraints vgrow="ALWAYS"/>
+        <RowConstraints vgrow="ALWAYS"/>
+        <RowConstraints/>
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints percentWidth="50"/>
+        <ColumnConstraints percentWidth="50"/>
+    </columnConstraints>
+
+    <HBox styleClass="title"
+          GridPane.hgrow="ALWAYS"
+          GridPane.vgrow="NEVER">
+        <Label text="Game Setup"/>
+    </HBox>
+
+    <GridPane GridPane.rowIndex="1" GridPane.columnSpan="2" hgap="20">
+        <rowConstraints>
+            <RowConstraints vgrow="ALWAYS"/>
+        </rowConstraints>
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+
+        <GroupPane title="Choose color">
+            <GridPane fx:id="colorsGrid" styleClass="grid-lines" VBox.vgrow="ALWAYS">
+                <rowConstraints>
+                    <RowConstraints vgrow="ALWAYS"/>
+                    <RowConstraints vgrow="ALWAYS"/>
+                </rowConstraints>
+                <columnConstraints>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                </columnConstraints>
+            </GridPane>
+        </GroupPane>
+
+        <GroupPane GridPane.columnIndex="1" title="Choose side">
+            <HBox fx:id="starterBox" styleClass="centered-box" VBox.vgrow="ALWAYS">
+            </HBox>
+            <Label styleClass="info" text="Double tap to change side"/>
+        </GroupPane>
+
+        <GroupPane GridPane.columnIndex="2" title="Choose goal">
+            <HBox fx:id="goalsBox" styleClass="grid-lines" VBox.vgrow="ALWAYS">
+            </HBox>
+        </GroupPane>
+
+
+    </GridPane>
+
+
+    <HBox fx:id="handBox" styleClass="grid-lines-border" GridPane.rowIndex="2">
+    </HBox>
+
+
+    <GridPane fx:id="deckGrid" styleClass="grid-lines-border" GridPane.columnIndex="1" GridPane.rowIndex="2"
+              GridPane.rowSpan="2">
+        <rowConstraints>
+            <RowConstraints vgrow="ALWAYS"/>
+            <RowConstraints vgrow="ALWAYS"/>
+        </rowConstraints>
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+    </GridPane>
+
+    <HBox GridPane.rowIndex="3" spacing="20" VBox.vgrow="NEVER"
+
+
+    >
+        <!--        <HBox focusTraversable="true" styleClass="button"-->
+        <!--              HBox.hgrow="ALWAYS" onMouseClicked="#startGame">-->
+
+        <!--            <Label  />-->
+        <!--        </HBox>-->
+        <Button styleClass="button" HBox.hgrow="ALWAYS" onAction="#startGame" text="Go to game"/>
+        <Button styleClass="button" HBox.hgrow="ALWAYS" onAction="#leaveGame" text="Leave"/>
+
+    </HBox>
+
+
+</fx:root>

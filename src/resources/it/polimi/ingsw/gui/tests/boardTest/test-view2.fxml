@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import it.polimi.ingsw.gui.components.panes.NewTopBarPane?>
+<?import javafx.scene.layout.VBox?>
+<VBox fx:id="main" alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polimi.ingsw.gui.tests.boardTest.TestController">
+    <NewTopBarPane minWidth="386.0"/>
+</VBox>

@@ -1,0 +1,49 @@
+.top {
+    -fx-border-radius: 10 10 0 0;
+    -fx-background-radius: 10 10 0 0;
+
+
+    -fx-border-width: 4 4 0 4;
+    -fx-border-color: #6a685c;
+    -fx-background-color: #e3dbb5;
+
+}
+
+.personal {
+    -fx-background-color: #cbbf69;
+    -fx-background-radius: 0 10 0 0;
+
+}
+
+.br {
+    -fx-border-width: 0 4 4 0;
+    -fx-border-color: #908e82;
+
+}
+
+.r {
+    -fx-border-width: 0 4 0 0;
+    -fx-border-color: #908e82;
+}
+
+.b {
+    -fx-border-width: 0 0 4 0;
+    -fx-border-color: #908e82;
+}
+
+.card {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 0);
+}
+
+.card2 {
+    -fx-background-radius: 20;
+    /*-fx-background-image: url("../images/CODEX_cards_gold_front_52.png");*/
+    -fx-background-repeat: stretch;
+    -fx-background-size: 150.0 71.0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+    -fx-background-color: transparent
+}
+
+.card2:hover {
+    -fx-opacity: 0.8;
+}

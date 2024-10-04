@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<fx:root styleClass="container" stylesheets="@../../view-styles.css"
+         xmlns="http://javafx.com/javafx/17.0.2-ea"
+         alignment="TOP_CENTER"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polimi.ingsw.gui.components.views.CenteredView"
+         type="StackPane">
+    <ImageView fx:id="backgroundView" preserveRatio="true">
+        <Image url="@../../images/backgrounds/username-bg.png"/>
+    </ImageView>
+    <AnchorPane fx:id="kingdomsPane">
+        <ImageView AnchorPane.rightAnchor="-1" preserveRatio="true" fitHeight="350">
+            <Image url="@../../images/backgrounds/animal-bg.png"/>
+        </ImageView>
+        <ImageView preserveRatio="true" fitHeight="350">
+            <Image url="@../../images/backgrounds/plant-bg.png"/>
+        </ImageView>
+        <ImageView AnchorPane.rightAnchor="-1" AnchorPane.bottomAnchor="0" preserveRatio="true" fitHeight="350">
+            <Image url="@../../images/backgrounds/mushroom-bg.png"/>
+        </ImageView>
+        <ImageView AnchorPane.bottomAnchor="0" preserveRatio="true" fitHeight="350">
+            <Image url="@../../images/backgrounds/insect-bg.png"/>
+        </ImageView>
+    </AnchorPane>
+    <GridPane fx:id="grid">
+
+        <rowConstraints>
+            <RowConstraints percentHeight="10"/>
+            <RowConstraints vgrow="ALWAYS"/>
+            <RowConstraints percentHeight="10"/>
+        </rowConstraints>
+        <columnConstraints>
+            <ColumnConstraints percentWidth="10"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints percentWidth="10"/>
+        </columnConstraints>
+    </GridPane>
+
+    <!--    <HBox style="-fx-background-color:red" fx:id="box" GridPane.columnIndex="1" GridPane.rowIndex="1"/>-->
+
+
+    <!--    <GridPane hgap="20" GridPane.columnIndex="1" GridPane.rowIndex="1">-->
+    <!--        <rowConstraints>-->
+    <!--            <RowConstraints vgrow="ALWAYS"/>-->
+    <!--        </rowConstraints>-->
+    <!--        <columnConstraints>-->
+    <!--            <ColumnConstraints percentWidth="50"/>-->
+    <!--            <ColumnConstraints percentWidth="50"/>-->
+    <!--        </columnConstraints>-->
+
+    <!--        &lt;!&ndash;        <Button styleClass="button" text="Hello!" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />&ndash;&gt;-->
+    <!--        &lt;!&ndash;        <Label text="Hello!" styleClass="button"/>&ndash;&gt;-->
+
+    <!--        <VBox spacing="20">-->
+    <!--            <HBox styleClass="title"-->
+    <!--                  GridPane.columnIndex="1"-->
+    <!--                  GridPane.hgrow="ALWAYS"-->
+    <!--                  GridPane.vgrow="NEVER">-->
+    <!--                <Label text="New lobby"/>-->
+    <!--                <Label styleClass="lobby-code" text="#1ABC"/>-->
+    <!--            </HBox>-->
+
+    <!--            <VBox styleClass="group-container" VBox.vgrow="ALWAYS">-->
+    <!--                <HBox styleClass="group-title"-->
+    <!--                      GridPane.columnIndex="1"-->
+    <!--                      GridPane.hgrow="ALWAYS"-->
+    <!--                      GridPane.vgrow="NEVER">-->
+    <!--                    <Label text="Players"/>-->
+    <!--                </HBox>-->
+    <!--                <HBox styleClass="row">-->
+    <!--                    <Circle radius="15" styleClass="circle"/>-->
+    <!--                    <Label-->
+    <!--                            text="giannisuper"/>-->
+    <!--                </HBox>-->
+    <!--                <HBox styleClass="row">-->
+    <!--                    <Circle radius="15" styleClass="circle"/>-->
+    <!--                    <Label-->
+    <!--                            text="giannisuper"/>-->
+    <!--                </HBox>-->
+    <!--            </VBox>-->
+
+
+    <!--            <HBox spacing="20" VBox.vgrow="NEVER">-->
+    <!--                <HBox styleClass="button"-->
+    <!--                      HBox.hgrow="ALWAYS">-->
+    <!--                    <Label text="Start"/>-->
+    <!--                </HBox>-->
+    <!--                <HBox styleClass="button"-->
+    <!--                      HBox.hgrow="ALWAYS">-->
+    <!--                    <Label text="Leave"/>-->
+    <!--                </HBox>-->
+
+    <!--            </HBox>-->
+
+
+    <!--        </VBox>-->
+
+    <!--        &lt;!&ndash;         Second col&ndash;&gt;-->
+    <!--        <VBox-->
+    <!--                styleClass="group-container"-->
+    <!--                GridPane.columnIndex="1"-->
+    <!--        >-->
+
+
+    <!--            <HBox styleClass="group-title"-->
+    <!--                  GridPane.columnIndex="1"-->
+    <!--                  GridPane.hgrow="ALWAYS"-->
+    <!--                  GridPane.vgrow="NEVER">-->
+    <!--                <Label text="Messages"/>-->
+    <!--            </HBox>-->
+
+    <!--            <ChatView/>-->
+
+
+    <!--            <VBox VBox.vgrow="ALWAYS"/>-->
+
+
+    <!--        </VBox>-->
+
+    <!--    </GridPane>-->
+</fx:root>

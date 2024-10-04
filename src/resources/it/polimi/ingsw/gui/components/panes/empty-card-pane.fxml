@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import java.lang.String?>
+<fx:root alignment="CENTER" prefHeight="79.0" prefWidth="119.0" spacing="2.0" stylesheets="@empty-card-pane.css" type="javafx.scene.layout.HBox" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <styleClass>
+      <String fx:value="card2" />
+      <String fx:value="card3" />
+   </styleClass>
+</fx:root>

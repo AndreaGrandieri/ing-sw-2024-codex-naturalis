@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import it.polimi.ingsw.gui.components.CustomTextArea?>
+<?import it.polimi.ingsw.gui.components.views.GroupPane?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<fx:root xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         stylesheets="@../view-styles.css"
+         style="-fx-font-size:18px"
+         fx:controller="it.polimi.ingsw.gui.views.UsernameView" type="GridPane">
+    <rowConstraints>
+        <RowConstraints vgrow="ALWAYS"/>
+        <RowConstraints/>
+        <RowConstraints vgrow="ALWAYS"/>
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS"/>
+        <ColumnConstraints percentWidth="40"/>
+        <ColumnConstraints hgrow="ALWAYS"/>
+    </columnConstraints>
+
+    <VBox
+            fx:id="containerBox"
+            GridPane.rowIndex="1"
+            GridPane.columnIndex="1"
+            alignment="CENTER"
+    >
+        <Label text="Welcome to" translateY="50" styleClass="title"/>
+        <ImageView fitHeight="300" translateY="30" viewOrder="-1" preserveRatio="true">
+            <Image url="@../images/codex_logo.png"/>
+        </ImageView>
+        <fx:define>
+            <GroupPane fx:id="usernamePane"
+                       title="Insert username"
+                       button="Continue"
+                       onButtonClicked="#goToTitles"
+            >
+                <VBox styleClass="lobby-lines">
+                    <!--            <TextField/>-->
+                    <CustomTextArea prefColumnCount="1" fx:id="textArea"
+                                    prefRowCount="1" HBox.hgrow="ALWAYS"
+                                    promptText="Insert username" styleClass="lobby-input"/>
+
+                    <Label styleClass="info" wrapText="true"
+                           text="Choose a username 3–10 characters long.&#10;Your username can be any combination of letters, numbers, or symbols ( _ , - )."
+                           maxWidth="Infinity"/>
+                </VBox>
+            </GroupPane>
+        </fx:define>
+
+        <GroupPane fx:id="serverPane"
+                   title="Connect to server"
+                   button="Continue"
+                   onButtonClicked="#connectServer"
+        >
+            <VBox styleClass="lobby-lines">
+                <!--            <TextField/>-->
+                <HBox styleClass="lobby-lines">
+                    <CustomTextArea prefColumnCount="1" fx:id="serverIpArea"
+                                    prefRowCount="1" HBox.hgrow="ALWAYS"
+                                    promptText="Server ip" styleClass="lobby-input"/>
+                    <CustomTextArea prefColumnCount="1" fx:id="serverPortArea"
+                                    prefRowCount="1" HBox.hgrow="ALWAYS"
+                                    promptText="Server port" styleClass="lobby-input"/>
+                </HBox>
+                <!--                <HBox styleClass="lobby-lines">-->
+                <!--                    <Label HBox.hgrow="ALWAYS" text="Connection mode" styleClass="info"/>-->
+                <ComboBox fx:id="serverModeCombo" styleClass="lobby-title"
+                          style="-fx-font-size: 18px;-fx-padding: 5;-fx-border-width: 0" promptText="Socket"
+
+                          maxHeight="Infinity">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="RMI"/>
+                            <String fx:value="Socket"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <!--                </HBox>-->
+
+            </VBox>
+        </GroupPane>
+    </VBox>
+
+
+</fx:root>

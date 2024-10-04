@@ -1,0 +1,334 @@
+@import url("styles/combo-box.css");
+@import url("styles/chat.css");
+@import url("styles/tab-pane.css");
+@import url("styles/text-area.css");
+
+@font-face {
+    font-family: 'Lusitana';
+    src: url('fonts/Lusitana-Regular.ttf');
+}
+
+
+/*
+.container {
+    -fx-background-image: url("images/username-bg.png");
+    -fx-background-size: cover;
+    -fx-background-position: 50%;
+    -fx-background-repeat: no-repeat;
+}
+*/
+
+* {
+    -fx-light-green: #e2f0cc;
+    -fx-light-yellow: #f0e6cc;
+    -fx-dark-yellow: #f3e1b3;
+    -fx-dark-gray: #6a685c;
+    -fx-light-gray: #bababa;
+
+    -fx-font-family: Lusitana;
+}
+
+
+.title,
+.group-title,
+.button,
+.group-button,
+.grid-lines-border,
+.group-container,
+.dark-border {
+    -fx-border-width: 4px;
+    -fx-border-color: -fx-dark-gray;
+    -fx-border-radius: 5px;
+}
+
+.lobby-lines-border,
+.light-border {
+    -fx-border-width: 4px;
+    -fx-border-color: -fx-light-gray;
+    -fx-border-radius: 5px;
+}
+
+.title,
+.group-title,
+.button,
+.group-button,
+.grid-lines-border,
+.lobby-lines-border,
+.group-container,
+.round-background {
+    -fx-background-radius: 5px;
+}
+
+.group-container,
+.light-yellow,
+.container,
+.player-row,
+.yellow-bg,
+.light-yellow-bg {
+    -fx-background-color: -fx-light-yellow;
+}
+
+.title,
+.group-title,
+.button,
+.group-button,
+.dark-yellow-bg {
+    -fx-background-color: -fx-dark-yellow;
+}
+
+.title {
+    -fx-spacing: 5;
+}
+
+.player-row {
+    -fx-border-width: 0 0 4 0;
+    -fx-border-radius: 0px;
+
+    -fx-padding: 10;
+
+    -fx-spacing: 10;
+
+    -fx-font-size: 20;
+
+    -fx-alignment: center-left;
+}
+
+.circle {
+    -fx-fill: lightgray;
+    -fx-stroke-width: 4;
+    -fx-stroke: grey;
+}
+
+.green {
+    -fx-fill: #c2f1be;
+    -fx-stroke: #6eba67;
+}
+
+.red {
+    -fx-fill: #edcbc5;
+    -fx-stroke: #ed8675;
+}
+
+.blue {
+    -fx-fill: #b4ecec;
+    -fx-stroke: #67baba;
+}
+
+.yellow {
+    -fx-fill: #ffcd7d;
+    -fx-stroke: #ffb02c;
+}
+
+.title,
+.group-title {
+    -fx-font-size: 2.39em;
+    -fx-padding: 0.56em 0.56em 0.56em 0.56em;
+}
+
+.group-title {
+    -fx-font-size: 1.67em;
+    -fx-padding: 0.83em 0.83em 0.83em 1.11em;
+    -fx-padding: 0.3em 0.3em 0.3em 0.8em;
+
+
+    -fx-border-width: 0 0 4 0;
+    -fx-border-radius: 5 5 0 0;
+
+    -fx-background-radius: 5 5 0 0;
+}
+
+
+.lobby-title,
+.player-num-title,
+.player-num-title2,
+.empty-list-info,
+.info {
+    -fx-padding: 10 7 7 10;
+    -fx-max-height: infinity;
+    -fx-max-width: infinity;
+    -fx-font-size: 20px;
+    -fx-background-color: -fx-light-yellow;
+
+}
+
+.player-num-title2 {
+    -fx-background-color: -fx-dark-yellow;
+
+}
+
+.player-num-title,
+.player-num-title2 {
+    -fx-font-size: 25px;
+    -fx-padding: 7 12 7 12;
+}
+
+.info {
+    -fx-font-style: italic;
+    -fx-text-fill: gray;
+    -fx-font-size: 17px;
+}
+
+.empty-list-info {
+    -fx-font-style: italic;
+    -fx-text-fill: gray;
+    -fx-font-size: 20px;
+    -fx-min-height: 80;
+    -fx-alignment: center;
+}
+
+.button,
+.group-button {
+    -fx-max-width: infinity;
+    -fx-alignment: center;
+    -fx-padding: 10;
+
+    -fx-font-size: 1.67em;
+}
+
+.lobby-row:hover, .hoverable:hover, .lobby-row:focused {
+    -fx-opacity: 0.95
+}
+
+.lobby-row:pressed, .hoverable:pressed, .hoverable {
+    -fx-opacity: 1
+}
+
+
+.button:hover,
+.group-button:hover {
+    -fx-background-color: #fae8bb;
+}
+
+.button:pressed,
+.group-button:pressed {
+    -fx-background-color: #eedeb4;
+}
+
+.group-button {
+    -fx-border-width: 4 0 0 0;
+    -fx-border-radius: 0 0 5 5;
+    -fx-background-radius: 0 0 5 5;
+
+}
+
+.lobby-code {
+    -fx-text-fill: gray;
+}
+
+.chat-input-cont {
+    -fx-border-width: 0.22em 0 0 0;
+    -fx-border-color: -fx-dark-gray;
+    -fx-background-color: -fx-dark-yellow;
+
+    -fx-padding: 1.11em 2.22em 1.11em 2.22em
+}
+
+.chat-input,
+.lobby-input {
+    -fx-font-size: 1.11em;
+
+    -fx-text-inner-color: black;
+    -fx-prompt-text-fill: -fx-dark-gray;
+
+    -fx-background-color: -fx-dark-yellow;
+    -fx-background-radius: 5px;
+
+    -fx-border-width: 0.22em;
+    -fx-border-color: #9c9a91;
+    -fx-border-radius: 5px;
+}
+
+.chat-input:focused,
+.lobby-input:focused {
+    -fx-prompt-text-fill: transparent;
+}
+
+.lobby-input {
+    -fx-border-width: 0;
+    -fx-background-radius: 0
+}
+
+
+.scroll .viewport {
+    -fx-background-color: -fx-light-yellow;
+}
+
+
+.centered-box {
+    -fx-alignment: center;
+    -fx-background-color: -fx-light-yellow;
+}
+
+.grid-lines-border,
+.grid-lines,
+.lobby-lines,
+.lobby-lines-border,
+.lobby-row {
+    -fx-background-color: -fx-dark-gray;
+    -fx-vgap: 4;
+    -fx-hgap: 4;
+    -fx-spacing: 4
+}
+
+.lobby-lines,
+.lobby-lines-border,
+.lobby-row {
+    -fx-background-color: -fx-light-gray;
+}
+
+.selected, .circle-box:selected {
+    -fx-background-color: -fx-light-green;
+}
+
+.disabled {
+    -fx-opacity: 0.9;
+}
+
+.group-container:focused, .button:focused {
+    -fx-border-width: 4px;
+    -fx-border-color: white;
+    -fx-border-radius: 5px;
+}
+
+
+.group-button:focused {
+    -fx-border-color: white;
+    -fx-text-fill: white;
+}
+
+.circle-box:focused, .hoverable:focused {
+    -fx-background-color: rgba(239, 239, 239, 0.8);
+}
+
+.circle-box:selected, .centered-box:selected {
+    -fx-background-color: -fx-light-green;
+}
+
+.circle-box:error, .centered-box:error {
+    -fx-background-color: #ddcdcd;
+}
+
+.scroll-pane {
+    -fx-highlight-fill: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.scroll-pane .scroll-bar {
+}
+
+.scroll-pane > .scroll-bar:vertical {
+    -fx-unit-increment: 20
+
+}
+
+.fixed-width {
+    -fx-min-width: 30px;
+}
+
+.hand-info {
+    -fx-font-size: 1.4em;
+    -fx-max-width: infinity;
+    -fx-padding: 0 0 0 0.2em;
+    -fx-text-fill:  white;
+}

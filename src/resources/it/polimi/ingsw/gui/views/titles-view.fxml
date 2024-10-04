@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import it.polimi.ingsw.gui.components.CustomTextArea?>
+<?import it.polimi.ingsw.gui.components.views.GroupPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<fx:root xmlns="http://javafx.com/javafx"
+         fx:controller="it.polimi.ingsw.gui.views.TitlesView"
+         style="-fx-font-size:18px"
+
+         xmlns:fx="http://javafx.com/fxml" hgap="30" type="GridPane">
+
+    <rowConstraints>
+        <RowConstraints vgrow="ALWAYS"/>
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints percentWidth="50"/>
+        <ColumnConstraints percentWidth="50"/>
+    </columnConstraints>
+
+    <VBox alignment="CENTER" HBox.hgrow="ALWAYS" spacing="20">
+        <VBox VBox.vgrow="ALWAYS"/>
+        <ImageView fitHeight="200" translateY="30" viewOrder="-1" preserveRatio="true">
+            <Image url="@../images/codex_logo.png"/>
+        </ImageView>
+
+        <!--        <Button styleClass="button" HBox.hgrow="ALWAYS" text="Rules"/>-->
+
+        <GroupPane fx:id="createLobbyGroup" title="Create a new game" button="Create" onButtonClicked="#createLobby">
+
+            <GridPane styleClass="lobby-lines">
+                <rowConstraints>
+                    <RowConstraints vgrow="ALWAYS"/>
+                    <RowConstraints vgrow="ALWAYS"/>
+                    <RowConstraints vgrow="ALWAYS"/>
+                </rowConstraints>
+                <columnConstraints>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                </columnConstraints>
+                <Label styleClass="lobby-title" maxHeight="Infinity" maxWidth="Infinity" text="Lobby name"/>
+                <CustomTextArea GridPane.rowIndex="1" prefColumnCount="1" prefRowCount="1"
+                          HBox.hgrow="ALWAYS" fx:id="lobbyNameTextArea"
+                          promptText="Insert lobby name" styleClass="lobby-input"/>
+
+                <Label GridPane.columnIndex="1" styleClass="lobby-title" maxWidth="Infinity" text="Players"/>
+                <CustomTextArea GridPane.columnIndex="1" prefColumnCount="1" GridPane.rowIndex="1"
+                                fx:id="playersTextArea"
+                                prefRowCount="1" HBox.hgrow="ALWAYS"
+                          promptText="Insert players" styleClass="lobby-input"/>
+
+                <Label styleClass="info"
+                       wrapText="true"
+                       text="Choose a name 3–10 characters long.&#10;Your name can be any combination of letters, numbers, or symbols ( _ , - )."
+                       GridPane.rowIndex="2"
+                       GridPane.columnSpan="2"
+                       maxWidth="Infinity"/>
+            </GridPane>
+        </GroupPane>
+
+
+        <!--        <Button styleClass="button" HBox.hgrow="ALWAYS" text="Change username" onAction="#goToUsername"/>-->
+    </VBox>
+
+    <GroupPane fx:id="lobbiesGroup" GridPane.columnIndex="1" title="Games on server" button="Refresh" onButtonClicked="#refreshLobbies"
+               HBox.hgrow="ALWAYS">
+        <ScrollPane
+                fx:id="scrollPane"
+                style="-fx-background-color:-fx-light-yellow"
+                styleClass="scroll"
+                fitToWidth="true"
+                vbarPolicy="NEVER"
+        >
+
+            <VBox fx:id="lobbyList" styleClass="grid-lines">
+
+            </VBox>
+        </ScrollPane>
+
+
+    </GroupPane>
+
+
+</fx:root>

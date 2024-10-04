@@ -1,0 +1,87 @@
+.top:hover {
+/ / -fx-background-color: gray;
+}
+
+.top {
+
+    -fx-border-width: 0 4 4 4;
+    -fx-border-color: #6a685c;
+    -fx-background-color: #c4c3c1;
+
+}
+
+.card {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 0);
+}
+
+.card3 {
+    -fx-border-width: 1;
+}
+
+.manuscript {
+    -fx-background-border: 0;
+    -fx-border-width: 0 4 0 0;
+    -fx-border-color: #9c9a91;
+
+    -fx-background-color: #f3e6bf;
+
+}
+
+.topbar {
+    -fx-background-color: #e5dfce;
+}
+
+
+.selected {
+    -fx-background-color: #e7e6e6;
+
+}
+
+.ball {
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-width: 4;
+}
+
+.green {
+    -fx-background-color: #c2f1be;
+    -fx-border-color: #6eba67;
+}
+
+.purple {
+    -fx-background-color: #f1daf5;
+    -fx-border-color: #ad67ba;
+}
+
+.cyan {
+    -fx-background-color: #b4ecec;
+    -fx-border-color: #67baba;
+}
+
+.active {
+    -fx-background-color: ffe181;
+    -fx-border-width: 0 4 4 0;
+    -fx-border-color: #b4a31f;
+}
+
+
+.red {
+    -fx-background-color: #f5c2be;
+    -fx-border-color: #ba6d67;
+}
+
+.b {
+    -fx-border-width: 0 0 4 0;
+    -fx-border-color: #9c9a91;
+}
+
+.r {
+    -fx-border-width: 0 4 0 0;
+    -fx-border-color: #9c9a91;
+}
+
+.br {
+    -fx-border-width: 0 4 4 0;
+    -fx-border-color: #9c9a91;
+
+}

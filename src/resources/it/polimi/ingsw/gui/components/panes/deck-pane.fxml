@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import it.polimi.ingsw.gui.components.panes.card.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<fx:root xmlns:fx="http://javafx.com/fxml/1"
+         styleClass="top"
+         stylesheets="@deck-pane.css"
+         type="GridPane"
+         xmlns="http://javafx.com/javafx/17.0.2-ea"
+         fx:controller="it.polimi.ingsw.gui.components.panes.DeckPane">
+
+    <rowConstraints>
+        <RowConstraints vgrow="ALWAYS"/>
+        <RowConstraints vgrow="ALWAYS"/>
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS"/>
+        <ColumnConstraints hgrow="ALWAYS"/>
+        <ColumnConstraints hgrow="ALWAYS"/>
+    </columnConstraints>
+
+    <HBox id="0" fx:id="resourceBox1" alignment="CENTER" HBox.hgrow="ALWAYS">
+        <styleClass>
+            <String fx:value="box"/>
+            <String fx:value="br"/>
+            <String fx:value="round-tl"/>
+        </styleClass>
+        <CardRect fx:id="resourceCardRect1" cardHeight="84">
+            <HBox.margin>
+                <Insets top="5.0"/>
+            </HBox.margin>
+        </CardRect>
+    </HBox>
+
+    <HBox id="1" fx:id="resourceBox2" alignment="CENTER" GridPane.columnIndex="1"
+          HBox.hgrow="ALWAYS">
+        <styleClass>
+            <String fx:value="box"/>
+            <String fx:value="br"/>
+        </styleClass>
+        <CardRect fx:id="resourceCardRect2" cardHeight="84"/>
+    </HBox>
+
+    <HBox id="2" fx:id="resourceBox3" alignment="CENTER" GridPane.columnIndex="2"
+          HBox.hgrow="ALWAYS">
+        <styleClass>
+            <String fx:value="box"/>
+            <String fx:value="b"/>
+            <String fx:value="round-tr"/>
+        </styleClass>
+        <CardRect fx:id="resourceCardRect3" cardHeight="84"/>
+    </HBox>
+
+    <HBox id="3" fx:id="goldBox1" alignment="CENTER" GridPane.rowIndex="1"
+          HBox.hgrow="ALWAYS">
+        <CardRect fx:id="goldCardRect1" cardHeight="84"/>
+        <styleClass>
+            <String fx:value="box"/>
+            <String fx:value="r"/>
+        </styleClass>
+    </HBox>
+
+    <HBox id="4" fx:id="goldBox2" alignment="CENTER" GridPane.columnIndex="1"
+          GridPane.rowIndex="1" HBox.hgrow="ALWAYS">
+        <styleClass>
+            <String fx:value="box"/>
+            <String fx:value="r"/>
+        </styleClass>
+        <CardRect fx:id="goldCardRect2" cardHeight="84"/>
+    </HBox>
+
+    <HBox id="5" fx:id="goldBox3" alignment="CENTER" styleClass="box"
+          GridPane.columnIndex="2" GridPane.rowIndex="1" HBox.hgrow="ALWAYS">
+        <CardRect fx:id="goldCardRect3" cardHeight="84"/>
+    </HBox>
+
+</fx:root>

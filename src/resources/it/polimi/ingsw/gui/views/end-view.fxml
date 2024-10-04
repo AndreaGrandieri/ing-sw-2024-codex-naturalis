@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import it.polimi.ingsw.gui.components.views.GroupPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.*?>
+<fx:root xmlns="http://javafx.com/javafx" stylesheets="@../view-styles.css"
+         fx:controller="it.polimi.ingsw.gui.views.EndView"
+         style="-fx-font-size:18px"
+         xmlns:fx="http://javafx.com/fxml" type="GridPane" hgap="30">
+
+    <rowConstraints>
+        <RowConstraints vgrow="ALWAYS"/>
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints percentWidth="50"/>
+        <ColumnConstraints percentWidth="50"/>
+    </columnConstraints>
+
+    <!--        <Button styleClass="button" text="Hello!" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />-->
+    <!--        <Label text="Hello!" styleClass="button"/>-->
+
+    <VBox spacing="20">
+        <HBox styleClass="title"
+              GridPane.hgrow="ALWAYS"
+              GridPane.vgrow="NEVER">
+            <Label fx:id="titleLabel"/>
+        </HBox>
+
+        <GroupPane title="Players" VBox.vgrow="ALWAYS"
+                   focusTraversable="true">
+            <ScrollPane
+                    style="-fx-background-color:-fx-light-yellow"
+                    styleClass="scroll"
+                    fitToWidth="true"
+                    vbarPolicy="NEVER"
+            >
+                <VBox fx:id="lobbyPlayersBox" styleClass="lobby-lines">
+
+                </VBox>
+            </ScrollPane>
+
+        </GroupPane>
+
+
+        <HBox spacing="20" fx:id="buttonsBox" VBox.vgrow="NEVER">
+            <Button styleClass="button" HBox.hgrow="ALWAYS" onAction="#leaveEnd" text="Go to titles"/>
+        </HBox>
+
+
+    </VBox>
+
+    <HBox fx:id="chatBox" GridPane.columnIndex="1"/>
+
+    <!--         Second col-->
+
+    <!--    <ChatView fx:id="chatView" styleClass="dark-border" GridPane.columnIndex="1" VBox.vgrow="ALWAYS"/>-->
+
+
+</fx:root>

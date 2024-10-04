@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import it.polimi.ingsw.gui.components.CustomTextArea?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<fx:root xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="it.polimi.ingsw.gui.components.views.ChatView"
+         type="VBox">
+
+    <HBox alignment="CENTER" spacing="10" styleClass="group-title">
+        <Label text="Messages" maxHeight="Infinity"/>
+
+        <HBox HBox.hgrow="ALWAYS"/>
+
+        <VBox fx:id="unreadBox" alignment="CENTER"/>
+
+        <ComboBox fx:id="userComboBox" promptText="Everyone" maxHeight="Infinity">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="*"/>
+                    <String fx:value="enry"/>
+                    <String fx:value="dstrant"/>
+                    <String fx:value="ciccio"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+    </HBox>
+
+    <ScrollPane VBox.vgrow="ALWAYS" style="-fx-background-color:-fx-light-yellow" fx:id="messageScroll"
+                fitToWidth="true"
+                vbarPolicy="NEVER"
+    >
+        <!--            fitToHeight="true"-->
+        <styleClass>
+            <String fx:value="edge-to-edge"/>
+            <String fx:value="scroll"/>
+        </styleClass>
+
+
+        <VBox VBox.vgrow="ALWAYS" styleClass="message-list" fx:id="chatMessagesBox">
+            <VBox/>
+            <!--            <HBox styleClass="message-mine">-->
+            <!--                <Label wrapText="true" maxWidth="400" styleClass="message"-->
+            <!--                       text="ehi raga come state ehi raga come state ehi raga come state ehi raga come state ehi raga come state ehi raga come state ehi raga come state"/>-->
+            <!--            </HBox>-->
+            <!--            <HBox styleClass="message-mine">-->
+            <!--                <Label styleClass="message" text="oi"/>-->
+            <!--            </HBox>-->
+
+
+            <!--            <HBox prefHeight="15"/>-->
+
+
+            <!--            <HBox styleClass="message-other">-->
+            <!--                <Circle radius="15" styleClass="circle"/>-->
+            <!--                <Label styleClass="message" text="Niente di che tu?"/>-->
+            <!--            </HBox>-->
+            <!--            <HBox styleClass="message-other">-->
+            <!--                <HBox prefWidth="34"/>-->
+            <!--                <Label styleClass="message" text="Sempre a giocare?"/>-->
+            <!--            </HBox>-->
+
+            <!--            <HBox prefHeight="15"/>-->
+
+            <!--            <HBox styleClass="message-other">-->
+            <!--                <Circle radius="15" styleClass="circle"/>-->
+            <!--                <Label styleClass="message" text="Ei regaz"/>-->
+            <!--            </HBox>-->
+            <!--            <HBox styleClass="message-other">-->
+            <!--                <HBox prefWidth="34"/>-->
+            <!--                <Label styleClass="message" text="partitina?"/>-->
+            <!--            </HBox>-->
+
+            <!--            <HBox prefHeight="15"/>-->
+
+            <!--            <HBox styleClass="message-other">-->
+            <!--                <Circle radius="15" styleClass="circle"/>-->
+            <!--                <Label styleClass="message" text="Ei regaz"/>-->
+            <!--            </HBox>-->
+            <!--            <HBox styleClass="message-other">-->
+            <!--                <HBox prefWidth="34"/>-->
+            <!--                <Label styleClass="message" text="partitina?"/>-->
+            <!--            </HBox>-->
+
+            <!--            <HBox prefHeight="15"/>-->
+
+            <!--            <HBox styleClass="message-other">-->
+            <!--                <Circle radius="15" styleClass="circle"/>-->
+            <!--                <Label styleClass="message" text="Ei regaz"/>-->
+            <!--            </HBox>-->
+            <!--            <HBox styleClass="message-other">-->
+            <!--                <HBox prefWidth="34"/>-->
+            <!--                <Label styleClass="message" text="partitina?"/>-->
+            <!--            </HBox>-->
+
+            <!--            <HBox prefHeight="15"/>-->
+
+            <!--            <HBox styleClass="message-other">-->
+            <!--                <Circle radius="15" styleClass="circle"/>-->
+            <!--                <Label styleClass="message" text="Ei regaz"/>-->
+            <!--            </HBox>-->
+            <!--            <HBox styleClass="message-other">-->
+            <!--                <HBox prefWidth="34"/>-->
+            <!--                <Label styleClass="message" text="partitina?"/>-->
+            <!--            </HBox>-->
+
+
+        </VBox>
+    </ScrollPane>
+
+    <VBox>
+        <HBox styleClass="chat-input-cont" VBox.vgrow="NEVER">
+            <CustomTextArea fx:id="textArea" prefRowCount="1" prefColumnCount="2" HBox.hgrow="ALWAYS"
+                      promptText="Type message" styleClass="chat-input"/>
+        </HBox>
+    </VBox>
+
+
+</fx:root>

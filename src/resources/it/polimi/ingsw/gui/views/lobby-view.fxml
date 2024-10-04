@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import it.polimi.ingsw.gui.components.views.GroupPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<fx:root xmlns="http://javafx.com/javafx" stylesheets="@../view-styles.css"
+         fx:controller="it.polimi.ingsw.gui.views.LobbyView"
+         style="-fx-font-size:18px"
+         xmlns:fx="http://javafx.com/fxml" type="GridPane" hgap="30">
+
+    <rowConstraints>
+        <RowConstraints vgrow="ALWAYS"/>
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints percentWidth="50"/>
+        <ColumnConstraints percentWidth="50"/>
+    </columnConstraints>
+
+    <!--        <Button styleClass="button" text="Hello!" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />-->
+    <!--        <Label text="Hello!" styleClass="button"/>-->
+
+    <VBox spacing="20">
+        <HBox styleClass="title">
+            <Label fx:id="lobbyTitleLabel" text="New lobby"/>
+            <Label fx:id="lobbyCodeLabel" styleClass="lobby-code" text="#1ABC"/>
+        </HBox>
+
+        <GroupPane title="Players" VBox.vgrow="ALWAYS"
+                   focusTraversable="true">
+            <insideTitle>
+                <HBox styleClass="lobby-lines-border">
+                    <Label fx:id="lobbyPlayersNumLabel" styleClass="player-num-title" text="3"/>
+                    <Label fx:id="lobbyMaxPlayersLabel" styleClass="player-num-title" text="3"/>
+                </HBox>
+            </insideTitle>
+            <ScrollPane
+                    style="-fx-background-color:-fx-light-yellow"
+                    styleClass="scroll"
+                    fitToWidth="true"
+                    vbarPolicy="NEVER"
+            >
+
+                <VBox fx:id="lobbyPlayersBox" styleClass="lobby-lines">
+
+                </VBox>
+            </ScrollPane>
+
+        </GroupPane>
+
+
+        <HBox spacing="20" fx:id="buttonsBox" VBox.vgrow="NEVER">
+            <Button fx:id="startButton" styleClass="button" HBox.hgrow="ALWAYS" onAction="#startLobby" text="Start"/>
+            <Button styleClass="button" HBox.hgrow="ALWAYS" onAction="#leaveLobby" text="Leave"/>
+        </HBox>
+
+
+    </VBox>
+
+    <HBox fx:id="chatBox" GridPane.columnIndex="1"/>
+
+    <!--         Second col-->
+
+    <!--    <ChatView fx:id="chatView" styleClass="dark-border" GridPane.columnIndex="1" VBox.vgrow="ALWAYS"/>-->
+
+
+</fx:root>

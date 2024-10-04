@@ -1,0 +1,15 @@
+.card2 {
+    -fx-border-radius: 2;
+    -fx-border-color: #cdb95b;
+/ / -fx-border-color: #b8b5aa;
+    -fx-border-width: 3;
+/ / -fx-background-color: black;
+}
+
+.placeholder {
+    -fx-background-radius: 2;
+    -fx-border-width: 3;
+    -fx-border-color: #b8b5aa;
+    -fx-background-color: #B1B2B5;
+/ / -fx-opacity: 0.5;
+}

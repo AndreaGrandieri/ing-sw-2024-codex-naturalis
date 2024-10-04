@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import it.polimi.ingsw.gui.components.panes.NewPointsPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.String?>
+<fx:root alignment="CENTER" minHeight="35.0" prefHeight="35.0" style="-fx-view-order: -2;"
+         stylesheets="@top-bar-pane.css" type="javafx.scene.layout.HBox" HBox.hgrow="ALWAYS"
+         xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="it.polimi.ingsw.gui.components.panes.unused.TopBarPane">
+
+
+    <styleClass>
+        <String fx:value="topbar" />
+        <String fx:value="br" />
+
+    </styleClass>
+    <padding>
+        <Insets right="5.0" />
+    </padding>
+
+    <HBox fx:id="usernameLetterBox" alignment="CENTER" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" prefHeight="40.0" prefWidth="40.0" scaleX="1.2" scaleY="1.2" translateX="-3.0">
+        <styleClass>
+            <String fx:value="ball" />
+            <String fx:value="green" />
+        </styleClass>
+        <Label fx:id="usernameLetterLabel" text="G" textOverrun="CLIP">
+            <font>
+                <Font name="Lato Regular" size="19.0" />
+            </font>
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+
+        </Label>
+    </HBox>
+
+    <Label fx:id="usernameLabel" prefHeight="35.0" text="giannisuper" HBox.hgrow="ALWAYS">
+        <padding>
+            <Insets bottom="5.0" left="7.0" right="10.0" top="3.0" />
+        </padding>
+        <font>
+            <Font name="Lato Regular" size="21.0" />
+        </font>
+    </Label>
+
+    <HBox fx:id="pointsPaneBox" alignment="CENTER_RIGHT" prefHeight="31.0" HBox.hgrow="ALWAYS">
+        <!--        <PointsPane fx:id="pointsPane" height="16" styleClass="mini" />-->
+        <NewPointsPane fx:id="pointsPane"/>
+    </HBox>
+
+</fx:root>

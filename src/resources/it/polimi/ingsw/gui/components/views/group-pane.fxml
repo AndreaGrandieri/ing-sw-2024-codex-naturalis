@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import it.polimi.ingsw.gui.components.views.GroupPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<fx:root xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="it.polimi.ingsw.gui.components.views.GroupPane"
+         type="GroupPane"
+         styleClass="group-container">
+    <!--    style="-fx-background-color:red"-->
+    <children>
+        <HBox fx:id="titleBox" alignment="CENTER" spacing="10" styleClass="group-title">
+            <Label fx:id="titleLabel" text="Players" maxHeight="Infinity"/>
+            <HBox HBox.hgrow="ALWAYS"/>
+
+        </HBox>
+        <VBox VBox.vgrow="ALWAYS" fx:id="contentBox"/>
+        <Button fx:id="button" styleClass="group-button" defaultButton="true" HBox.hgrow="ALWAYS" text="Continue"/>
+        <!--        <Label fx:id="button" styleClass="group-button" maxWidth="Infinity" text="Continue"/>-->
+
+
+    </children>
+</fx:root>

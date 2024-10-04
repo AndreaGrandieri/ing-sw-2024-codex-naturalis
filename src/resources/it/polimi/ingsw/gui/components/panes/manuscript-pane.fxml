@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import java.lang.String?>
+<fx:root stylesheets="@manuscript-pane.css" type="Pane" xmlns="http://javafx.com/javafx/17.0.2-ea"
+
+         xmlns:fx="http://javafx.com/fxml/1">
+    <!--            fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="NEVER"-->
+    <!--         maxHeight="400"-->
+    <!--         maxWidth="800"-->
+    <!--         translateX="200"-->
+    <!--         translateY="200"-->
+    <!--         viewOrder="-3"-->
+    <!--         alignment="CENTER"-->
+
+    <!--    <Button onMouseClicked="#extra" viewOrder="-3"/>-->
+
+    <styleClass>
+        <String fx:value="edge-to-edge"/>
+        <String fx:value="scroll"/>
+        <String fx:value="root"/>
+    </styleClass>
+
+
+    <HBox
+            fx:id="box"
+            alignment="CENTER"
+            styleClass="box"
+            style="-fx-border-width:2;-fx-border-color:gray"
+    >
+        <Group styleClass="group" fx:id="group"/>
+    </HBox>
+
+    <!--    <Pane fx:id="contentPane"/>-->
+
+</fx:root>

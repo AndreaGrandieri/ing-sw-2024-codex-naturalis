@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import it.polimi.ingsw.gui.components.panes.manuscript.ManuscriptBox?>
+<?import it.polimi.ingsw.gui.components.panes.NewTopBarPane?>
+<?import javafx.scene.layout.*?>
+<fx:root alignment="TOP_LEFT" stylesheets="@manuscript-pane.css" type="StackPane"
+         xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+         focusTraversable="true"
+         fx:controller="it.polimi.ingsw.gui.components.panes.MainManuscriptPane">
+
+    <ManuscriptBox fx:id="manuscriptPane" HBox.hgrow="ALWAYS"/>
+    <HBox mouseTransparent="true">
+        <NewTopBarPane fx:id="topBarPane" mouseTransparent="true"
+                       HBox.hgrow="NEVER"/>
+        <HBox HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+
+</fx:root>

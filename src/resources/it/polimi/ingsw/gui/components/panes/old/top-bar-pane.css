@@ -1,0 +1,42 @@
+
+.topbar {
+-fx-background-color: #e5dfce;
+}
+
+
+.selected {
+-fx-background-color: #e7e6e6;
+
+}
+
+.ball {
+-fx-background-radius: 20;
+-fx-border-radius: 20;
+-fx-border-width: 4;
+}
+
+.green {
+-fx-background-color: #c2f1be;
+-fx-border-color: #6eba67;
+}
+
+.red {
+-fx-background-color: #edcbc5;
+-fx-border-color: #ed8675;
+}
+
+.blue {
+-fx-background-color: #b4ecec;
+-fx-border-color: #67baba;
+}
+
+.yellow {
+-fx-background-color: #ffcd7d;
+-fx-border-color: #ffb02c;
+}
+
+.active {
+-fx-background-color: ffe181;
+-fx-border-width: 0 4 4 0;
+-fx-border-color: #b4a31f;
+}

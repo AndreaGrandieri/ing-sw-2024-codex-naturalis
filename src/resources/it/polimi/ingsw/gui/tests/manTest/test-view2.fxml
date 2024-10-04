@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import it.polimi.ingsw.gui.components.panes.manuscript.ManuscriptBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<VBox fx:id="mainBox" alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="it.polimi.ingsw.gui.tests.manTest.TestController2">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <GridPane VBox.vgrow="ALWAYS">
+        <rowConstraints>
+            <RowConstraints vgrow="ALWAYS"/>
+            <RowConstraints vgrow="ALWAYS" percentHeight="70"/>
+            <RowConstraints vgrow="ALWAYS"/>
+        </rowConstraints>
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints hgrow="ALWAYS" percentWidth="70"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+        <!--                       style="-fx-background-color:red"-->
+        <ManuscriptBox GridPane.rowIndex="1" GridPane.columnIndex="1"
+                       prefWidth="300"
+                       prefHeight="200"
+                       id="0" fx:id="manPane"/>
+    </GridPane>
+
+
+    <Label fx:id="welcomeText"/>
+    <Button text="Play card" onAction="#onButtonClick"/>
+</VBox>

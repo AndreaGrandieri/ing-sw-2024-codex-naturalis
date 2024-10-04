@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import it.polimi.ingsw.gui.components.panes.DeckPane?>
+<?import it.polimi.ingsw.gui.components.panes.GoalsPane?>
+<?import it.polimi.ingsw.gui.components.panes.MainHandPane?>
+<?import it.polimi.ingsw.gui.components.panes.MainManuscriptPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<fx:root fx:id="mainBox" alignment="BOTTOM_CENTER" prefHeight="764.0" prefWidth="1302.0" styleClass="background"
+         stylesheets="@../game-view.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="it.polimi.ingsw.gui.views.GameView" type="VBox">
+    <StackPane VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets left="30.0" right="30.0" top="30.0"/>
+        </VBox.margin>
+
+        <Pane fx:id="hoverPane" mouseTransparent="true" viewOrder="-1"/>
+
+
+        <GridPane hgap="20.0" styleClass="container" StackPane.alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES"/>
+                <ColumnConstraints hgrow="SOMETIMES" percentWidth="40.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" percentWidth="27.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="ALWAYS"/>
+                <RowConstraints percentHeight="3" vgrow="NEVER"/>
+                <RowConstraints percentHeight="25.0" vgrow="ALWAYS"/>
+                <RowConstraints percentHeight="3" vgrow="NEVER"/>
+                <RowConstraints/>
+            </rowConstraints>
+
+            <MainManuscriptPane fx:id="mainPlayerPane" styleClass="main-manuscript" viewOrder="-5"
+                                GridPane.columnSpan="2" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS"
+                                HBox.hgrow="NEVER"/>
+
+            <TabPane fx:id="tabPane" GridPane.columnIndex="2" GridPane.vgrow="ALWAYS"
+                     side="BOTTOM" tabClosingPolicy="UNAVAILABLE"
+            >
+                <Tab fx:id="tab" text="Players">
+                    <GridPane fx:id="otherPlayersGrid">
+                        <rowConstraints>
+                            <!--                    <RowConstraints percentHeight="33" vgrow="ALWAYS"/>-->
+                            <!--                    <RowConstraints percentHeight="33" vgrow="ALWAYS"/>-->
+                            <!--                    <RowConstraints percentHeight="33" vgrow="ALWAYS"/>-->
+                        </rowConstraints>
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="ALWAYS"/>
+                        </columnConstraints>
+
+                        <!--                <OtherPlayerPane id="1" fx:id="pp1"
+                        style="-fx-border-width: 4; -fx-border-radius: 10 10 0 0;"-->
+                        <!--                                 VBox.vgrow="ALWAYS"/>-->
+                        <!--                <OtherPlayerPane id="2" fx:id="pp2" active="false" color="red" username="jamerino" GridPane.rowIndex="1"-->
+                        <!--                                 VBox.vgrow="ALWAYS"/>-->
+                        <!--                <OtherPlayerPane id="3" fx:id="pp3"
+                         style="-fx-border-radius: 0 0 10 10;"
+                         GridPane.rowIndex="2"-->
+                        <!--                                 GridPane.vgrow="ALWAYS" VBox.vgrow="ALWAYS"/>-->
+
+                    </GridPane>
+                </Tab>
+                <Tab fx:id="chatTab" text="Chat">
+                    <!--                    <ChatView style="-fx-font-size:14px; -fx-border-radius:5 5 0 0" styleClass="dark-border"/>-->
+                </Tab>
+                <Tab text="Other">
+                    <VBox style="-fx-font-size:14px; -fx-border-radius:5 5 0 0" styleClass="group-container">
+                        <VBox VBox.vgrow="ALWAYS"/>
+                        <Label styleClass="group-button" text="Quit" onMouseClicked="#goBack" maxWidth="Infinity"/>
+                    </VBox>
+                </Tab>
+
+            </TabPane>
+
+
+            <GoalsPane GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.rowSpan="2" fx:id="goalsPane"
+                       alignment="BOTTOM_LEFT" prefWidth="405.0" HBox.hgrow="ALWAYS"/>
+
+            <MainHandPane fx:id="mainHandPane" alignment="TOP_RIGHT" translateY="-4.0" GridPane.columnIndex="1"
+                          GridPane.rowIndex="1" GridPane.rowSpan="2" VBox.vgrow="ALWAYS"/>
+
+            <DeckPane GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.rowSpan="2"
+                      fx:id="deckPane" HBox.hgrow="ALWAYS"/>
+
+        </GridPane>
+    </StackPane>
+    <!--    <TabView>-->
+    <!--        <Tab/>-->
+    <!--    </TabView>-->
+</fx:root>

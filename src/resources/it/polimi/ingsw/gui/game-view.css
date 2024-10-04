@@ -1,0 +1,50 @@
+@import url("view-styles.css");
+
+
+.background {
+    -fx-background-color: #f3e7c5;
+}
+
+.container {
+    -fx-background-color: #c4c3c1;
+    -fx-padding: 22 22 0 22;
+    -fx-border-width: 4 4 0 4;
+    -fx-border-color: #6a685c;
+    -fx-border-radius: 10 10 0 0;
+    -fx-background-radius: 10 10 0 0;
+
+}
+
+.firstOther {
+    -fx-border-width: 4;
+    -fx-border-radius: 10 10 0 0
+}
+
+.lastOther {
+    -fx-border-radius: 0 0 10 10;
+}
+
+.main-manuscript {
+    -fx-border-width: 4;
+    -fx-border-color: #6a685c;
+
+    -fx-border-radius: 10 10 0 10;
+    -fx-background-radius: 10 10 0 10;
+
+
+}
+
+.main-manuscript > .root {
+    -fx-background-color: #f3dfa6;
+
+}
+
+
+.scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll > .content {
+    -fx-background-color: transparent;
+}
+
