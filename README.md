@@ -1,6 +1,9 @@
 
 <h1 align="center">
     <a href="https://www.craniocreations.it/prodotto/codex-naturalis"> <img src="src/resources/it/polimi/ingsw/gui/images/codex_logo.png" alt="logo" width="250"/></a>
+    <br>
+    Codex Naturalis
+    <br>
 </h1>
 <h4 align="center">Progetto di Ingegneria del software per il Politecnico di Milano 2023 - 2024</h4>
 <p align="center">
