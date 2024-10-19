@@ -5,12 +5,12 @@
     Codex Naturalis
     <br>
 </h1>
-<h4 align="center">Progetto di Ingegneria del software per il Politecnico di Milano 2023 - 2024</h4>
+<h4 align="center">Software Engineering Project for Politecnico di Milano 2023 - 2024</h4>
 <p align="center">
     Andrea Galvan •
-    @dstrant •
-    Andrea Grandieri •
-    Enrico Grillo
+    @AndreaGrandieri •
+    @dstrAnt •
+    @enricogrillo
 </p>
 
 ## 🚀 About the project
